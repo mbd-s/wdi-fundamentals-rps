@@ -61,13 +61,13 @@ function playToFive() {
             playerWins += 1;
             console.log("Player chose " + playerMove + " and the computer chose " + computerMove + ".");
             console.log("Player wins.");
-            console.log("The score is " + playerWins + " (Player) to " + computerWins + " (Computer).")
+            console.log("The score is " + playerWins + " (Player) to " + computerWins + " (Computer).");
         }
         else if (winner === "computer") {
             computerWins += 1;
             console.log("Player chose " + playerMove + " and the computer chose " + computerMove + ".");
             console.log("Computer wins.");
-            console.log("The score is " + playerWins + " (Player) to " + computerWins + " (Computer).")
+            console.log("The score is " + playerWins + " (Player) to " + computerWins + " (Computer).");
         }
         else if (winner === "tie") {
             console.log("Player chose " + playerMove + " and the computer chose " + computerMove + ".");
