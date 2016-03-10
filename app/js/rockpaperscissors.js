@@ -1,8 +1,4 @@
-////////////////////////////////////////////////
-/*   Provided Code - Please Don't Edit   */
-////////////////////////////////////////////////
 'use strict';
-
 function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors'.");
     return prompt();
@@ -17,17 +13,12 @@ function randomPlay() {
         return "scissors";
     }
 }
-////////////////////////////////////////////////
-/*           Write Your Code Below            */
-////////////////////////////////////////////////
-
 function getPlayerMove(move) {
     return move || getInput();
 }
 function getComputerMove(move) {
     return move || randomPlay();
 }
-
 function getWinner(playerMove,computerMove) {
     var winner;
     if ((playerMove === "rock") && (computerMove === "rock")) {
@@ -59,7 +50,6 @@ function getWinner(playerMove,computerMove) {
     }
     return winner;
 }
-
 function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
@@ -68,14 +58,21 @@ function playToFive() {
         var winner = getWinner(getPlayerMove(), getComputerMove());
         console.log(winner);
         if (winner === "player") {
-            console.log("Player wins");
             playerWins += 1;
+            console.log("Player chose " + playerMove + " and the computer chose " + computerMove + ".");
+            console.log("Player wins.");
+            console.log("The score is " + playerWins + " (Player) to " + computerWins + " (Computer).")
         }
         else if (winner === "computer") {
-            console.log("Computer wins");
             computerWins += 1;
+            console.log("Player chose " + playerMove + " and the computer chose " + computerMove + ".");
+            console.log("Computer wins.");
+            console.log("The score is " + playerWins + " (Player) to " + computerWins + " (Computer).")
+        }
+        else if (winner === "tie") {
+            console.log("Player chose " + playerMove + " and the computer chose " + computerMove + ".");
+            console.log("Tie.");
         }
     }
     return [playerWins, computerWins];
 }
-
